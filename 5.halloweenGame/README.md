@@ -2,6 +2,8 @@
 
 ## [➡️ PLAY NOW](https://hainuochen.hosting.nyu.edu/newport/halloweenFolder/index.html)
 
+<img src="images/halloweengame.gif" width="500"/>
+
 
 * This is an assignment for the Interactive Computing Class. I made this pixel-style vertical infinite runner game with the Halloween theme. There are three characters: Ghost, Candy, and Pumpkin. The goal is to control the Ghost to move left and right (by A & D keys), to eat as many Candies as possible, but avoid the Pumpkins at the same time. The rules are given on the initial interface of the game. Candies and Pumpkins are objects with similar functions: they drop from the top of the screen, and they disappear as soon as they hit the Ghost. For Candies, the hit means scores up, whereas for Pumpkins, the hit means game over.
   
