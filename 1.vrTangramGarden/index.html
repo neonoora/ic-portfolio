@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HC HOME PAGE</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=0.5">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+        <link rel="stylesheet" type="text/css" href="../styles.css">
+
+        <style>
+
+
+        </style>
+
+
+    </head>
+    <body>
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand cute-button" href="../index.html"><b>HAINUO CHEN</b></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup" >
+            <div class="navbar-nav">
+                <a class="nav-link cute-button" href="../portfolio.html">PORTFOLIO</a>
+                <a class="nav-link cute-button" href="../misc.html">MISC</a>
+                <a class="nav-link cute-button" href="../resume.html">RESUME</a>
+            </div>
+          </div>
+        </div>
+    </nav>
+
+        <div class="content">
+            <h1><button type="button" class="btn btn-secondary btn-md" style="display: inline; height: 3rem; font-size: 20pt;">VR</button>
+              <b>Tangram Garden </b></h1><br>
+            <div class="buttons-box">
+                <a href="3Dnewnewnew/index.html"><button type="button" class="btn btn-primary btn-lg">PLAY</button></a>
+                <a href="https://www.youtube.com/watch?v=UAVsBXnT-oQ"><button type="button" class="btn btn-primary btn-lg">VIDEO</button></a>
+                <a href="https://github.com/neonoora/udgrportfolio/tree/main/vrTangramGarden"><button type="button" class="btn btn-primary btn-lg">GitHub</button></a>
+            </div>
+
+      <br><br>
+      <h2>Final Documentation (Dec. 20, 2022)</h2>
+
+      <h4>
+        I created the Tangram Garden as my final project for the Interactive Computing Class.
+        The user can use the 2D easel to make 3D tangram creatures, which can be added to the garden and move (or not) according to their attributes.
+      </h4>
+        <br/><h3>Making the Project</h3><br>
+      <h4>
+        <ul>
+            <li>2D Tangram
+              <ul>
+                <li><u>Tangram pieces:</u> I created each 2D tangram piece from scratch by calculating their sizes, positions, etc., which is somehow unnecessary because using png images would be much easier. </li>
+                <li><u>Rotation feature:</u> Instead of rotating the piece every time the R key is pressed, I set the pieces in constant rotation mode and the key press changes the rotation angle only. </li>
+              </ul>
+            </li><br>
+            <li>3D Tangram
+              <ul>
+                <li><u>3D models: </u> I created 3D pieces in TinkerCad and exported them as OBJ files. </li>
+                <li><u>Connecting 2D & 3D pieces: </u> The 2D easel buffer communicates with the 3D garden through the intersection info within the overFunction. To connect specific 2D & 3D pieces, I made all of them global variables and gave them IDs, so that each 2D piece can connect to its own 3D piece accordingly. </li>
+              </ul>
+            </li><br>
+            <li>3D Tangram in the Garden
+              <ul>
+                <li><u>Add the creature to the garden:</u> Originally my idea was to make a whole new set of the easel and 3D pieces every time the user creates a new creature. However, based on the code I have already written, I decided to make a new copy of the original container every time the user creates a creature. 
+                  With this mechanism, the later moving of the 2D pieces will not affect the existing container copies, and the user can add the same creature to the world as many times as they want. To make the garden more organized, I put the static creatures on the right side of the garden and the walking creatures on the left, 
+                  so they are unlikely to run into and through each other. </li>
+                <li><u>Buttons:</u> The user can reset the easel and clear the garden; they can also determine the attribute of their creature: whether it can stay still, walk around, or fly in the sky. The creatures will then be categorized into different arrays and move accordingly. </li>
+                <li><u>Rotation & Fluctuation:</u> Based on the Shark with Heading example Professor Kapp shared with me, I used the Perlin noise to make the creatures (the container copies) rotate and fluctuate following a transparent sensor within the container. This makes the whole garden look more lively. </li>
+              </ul>
+            </li>
+          </ul>
+      </h4>
+        <br/><h3>Future Development</h3><br>
+      <h4>
+        <li><u>Flip feature:</u> The flip feature was made especially for the yellow quad piece. On the 2D buffer, the piece is flipped by reversing the X position of every point of the 2D piece, while in the 3D world, the flip is made possible by spinZ( ). It is sometimes a bit off. I would like to fix this in future development. </li><br/>
+        <li><u>Creature interaction:</u> If I have the chance to make this a bigger project, I would like to make the creatures interact with each other like in an ecosystem, and the users can customize the attributes of their creatures to make their collections of creatures, kind of like pokemon. </li><br/>
+        <li>It is oddly satisfying to turn my weird childhood fantasies into a VR project, and I am surprised but proud to be able to build this whole project by myself, with advice from Professor Kapp. Never thought CS was for me but now I can say that I do coding. </li><br/>
+      </h4>
+      <br><br><br><br>
+
+
+
+      <h2>Update #2 (Dec. 07, 2022)</h2>
+        <h4>For now the <a href = "2Dtangram/index.html" style="color: orange;">2D tangram</a> part is finished, 
+            and it works well on the <a href = "3Dtangram/index.html" style="color: orange;">buffer in the VR world </a>. 
+            <br><br><div style="display: flex;justify-content: center; flex-wrap: wrap;">
+                <img src="images/tangram2d.png" style="height:18rem; width: auto;">
+                <img src="images/buffer.png" style="height:18rem; width: auto;">
+            </div><br>
+            Yet the mouse position in the buffer is not accurate (i.e. mouseX & mouseY is not where I clicked on the buffer). 
+            I am not sure how to fix this, so I made a small ellipse functioning as the mouse on the buffer.
+            The next step would be to connect the 2D shapes with 3D shapes, so that they can move and rotate together. I also need to save the 3D artwork and move around in the VR world.
+            <br><br><br><br>
+        </h4>
+
+      <h2>Update #1 (Nov. 30, 2022)</h2>
+      <h4>
+        I decided to make the final program into VR via a frame. The user should be able to assemble their tangram on a 2D buffer, and VR connects to that buffer and brings the art to the 3D world.
+        <br><br>So far I have figured out how to move one piece of tangram shape around and rotate it in 2D. The next step is to make the whole set of tangrams work in 2D.
+        <br><br>I have also found a way (TinkerCAD) to create 3D geometric figures for my program. 
+          <img src="images/TinkerCad.png" style="height:18rem; width: auto; display: flex; align-self: center;"><br>
+        The next step is to connect the 2D shapes in the buffer and the 3D shapes in VR. In the future I need to make the 3D figures move around in the garden.
+        <br><br><br><br>
+      </h4>
+
+
+      <h2>PROPOSAL (Nov. 21, 2022)</h2>
+
+      <h4>
+        For the final project, I would like to use AR to enable the user to create a garden. Basically, the user assembles objects by using tangrams on the phone. The webcam recognizes the piece and adds it into the garden. The garden will be filled with tangram animals, plants, houses, decorations etc.
+       <br><br>Tangram is a traditional Chinese toy that consists of 7 flat polygons with different colors. As a kid I loved making abstract animals with tangram, and I thought it must be funny to see these weird looking animals actually running around.
+       <br><br><div style="display: flex;justify-content: center;"><img src="images/tangramset.png" style="height:20rem; width: auto;"></div>
+       <br><br>First, I will need to make a webpage in which the user can assemble tangrams on their phone. There will be 7 polygons, and the user should be able to drag them around, change their directions, and assemble them together. The users can either assemble according to a sample, or create their own masterpiece. 
+       They will also need to categorize their work as animals, plants, houses, decorations or whatever.
+       <br><br>Second, I will need to make the webcam recognize the piece. Since each polygon has a different color and shape, the webcam should be able to detect them based on their color and shape. The webcam should also recognize the category that the user picked.
+       <br><br>Finally, I will need to add the object into the garden. If the webcam recognizes the object as a plant or house, it should not move; if it's an animal or butterfly, it should move or fly around.
+       <br><br>I also have some concerns. So far I have no idea how the webcam and recognition work. Besides, I am not sure how 2D tangram art may look in the garden. Should I make them look more real and lively by making them 3D? Not sure how to do this either.
+      </h4>
+ 
+        </div>
+
+
+
+    </body>
+</html>
