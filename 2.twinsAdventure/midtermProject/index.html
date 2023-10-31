@@ -1,0 +1,123 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Midterm Project</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+
+    <style type="text/css">
+
+      a:link{
+        color: orange;
+      }
+      a:visited{
+        color: orange;
+      }
+      
+    </style>
+
+
+  </head>
+  <body style="margin-left: 300px;margin-right: 300px;margin-top: 50px; background-color: rgba(253,244,238,0.97);color:darkblue ;">
+
+    <h1 style="text-align: center; margin-bottom:30px ;">Midterm Project</h1>
+
+    <div class="container">
+      <div class="row align-items-start">
+        <div class="col-md-12">
+          
+          <h3> <a href="update2.5/index.html"> Update #2.5 - 20221101</a> </h3><br/>
+
+          <h3> <a href="update2/index.html"> Update #2 - 20221031</a> </h3><br/>
+            <h4> Half way through the first level </h4>
+            <ul>
+              <li>The characters should find a way both of them can go and get to the destination in a limited amount of time. (time limit will be made later)</li>
+              <li>I built a tile-based map, and I made the characters move on the road and stop when they encounter obstacles. </li>
+              <li>I still need more global variables to keep track of whether either one of the characters stops and makes the other stop too.</li>
+            </ul>
+            <h4> Concerns </h4>
+            <ul>
+              <li>Not sure how the speed difference feature can work (the characters cannot get to the destination together / it doesn’t make sense to ask players find the only way out if the characters can go to destination one after another)</li>
+              <li>Feminism History seems like a topic too heavy for this midterm project. I’m not confident that what I made can express this topic properly. </li>
+              <li>I’m thinking about keeping all the basic ideas the same (i.e. two screens / three levels / voice control etc.) but change to other themes, such as lost sisters with telepathy going through adventures to find each other, in which i can make the two characters move at the same speed. </li>
+            </ul>
+            <br>
+            <hr>
+
+          <h3> <a href="update1/index.html"> Update #1 - 20221024</a> </h3><br/>
+
+          <h4>Simultaneous Movement (delay fixed) </h4>
+          <ul>
+            <li>Press W/A/S/D key to move up/left/down/right.</li>
+            <li>Characters on two canvases move in the same direction.</li>
+            <li>The left one moves slower, the right one moves faster</li>
+            <li><b> Press down (A&D) or (W&S) ==> no one moves</b></li>
+          </ul>
+          <br/>
+          <h4>Levels Specification </h4>
+          <ul>
+            <li>Level 1
+              <ul>
+                <li>Characters <u>move forward</u> to get to their own destinations. </li>
+                <li>Different moving speeds</li>
+                <li>Different life value loss when hit <u>static obstacles</u></li>
+              </ul>
+            </li>
+            <li>Level 2
+              <ul>
+                <li>Characters <u>move around</u> to get to their own destinations.  </li>
+                <li>Different moving speeds</li>
+                <li>When meet moving objectives, the slow/past character die, and the fast/modern character loses a bit life value</li>
+              </ul>
+            </li>
+            <li>Level 3 - Voice Control
+              <ul>
+                <li>The modern character stands in the crowd and tries to voice for women. The player will read a text; the louder the user reads, the higher the value in the volume bar, more people gather around and the player gains points. </li>
+                <li>But once the player reads out too loud and gets the attention of the police or internet censor, she’s muted (volume bar shows 0 no matter how loud the user reads) and the canvas shows “404 page not found”. End of the game. </li>
+                <li>The user is never gonna win the 3rd level. </u></li>
+              </ul>
+            </li>
+          </ul>
+          <br/>
+          <h4>Class Examples for Reference </h4>
+          <ul>
+            <li>moving objectives should move & change direction randomly (see day 10 / ex01 - Random Walker class) </li>
+            <li>more people in the crowd should move toward the character with the increasing volume  (see day 12 / ex07 - scare the creatures) </li>
+          </ul>
+          <br/>
+
+
+          <hr>
+
+          <h3> Midterm Project - Proposal</h3><br/>
+
+          <b>Group Idea:</b> Girls  Adventure<br/><br/>
+
+          <b>Group Members:</b> Susan Zhang, Hainuo Chen <br/><br/>
+
+          <b>Contact:</b> xz3085@nyu.edu, hc2946@nyu.edu <br/><br/>
+
+          <b>Proposal:</b> <br/><br/>
+
+
+          Our project themed the plight of women and the gradual rise of feminism throughout history. We would like to compare and contrast the discrimination and obstacles encountered by women from different eras. We’re interested in implementing multiple canvases and using voice as control. <br/><br/>
+
+          There will be two separate canvases on the same screen, each with one female character on it: one from a historical time, and the other from the 21st century. They aim to achieve the same goal on their own canvas respectively. We’re going to have three levels with different small games varied in settings(eg. workplace/school/public spaces elsewhere eg. streets). <br/><br/>
+
+          We’ll refer to similar techniques with the examples shown in class about the character walking into different artworks. Compared to the modern character, the historical characters will almost always find the goal harder to achieve, reflecting the restrictions on women are reduced over time. 
+          <br/><br/>
+
+          For instance, both characters aim to walk to a destination. The character from the 19th century has to wear a heavy dress, move slowly, and be more vulnerable to obstacles on the road. The modern character has more options, which allows quick and dexterous movement. We could assign different speeds and “life value” to each character, and use object-oriented programming for the characters and the obstacles. 
+          <br/><br/>
+
+        </div>
+    </div>
+
+    
+
+
+  </body>
+</html>

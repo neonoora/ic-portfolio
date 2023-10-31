@@ -1,0 +1,200 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Create Your Own Map</title>
+
+    <!-- custom CSS -->
+    <style type="text/css">
+      #sketch1 {
+        width: 550px;
+        height: 550px;
+        margin: 1px;
+      }
+
+      #sketch2 {
+        width: 550px;
+        height: 550px;
+        margin: 1px;
+      }
+      body {
+        margin: auto;
+        text-align: center;
+        padding-bottom: 20px;
+      }
+
+    </style>
+  </head>
+  <body style="text-align: center;">
+    <h1>Create Your Own Map</h1>
+    <ul>
+
+      <li>mouse press = select tile</li>
+      <li>mouse press + T = Tree</li>
+      <li>mouse press + E = Exit</li>
+      <li>mouse press + C = Character</li>
+      <li>mouse press + Z = UNDO</li>
+      <li>mouse press + S = SAVE</li>
+      <li></li>
+      <li> only one exit and one character is allowed</li>
+      <li> maps & character position will be save in localstorage</li>
+  
+    </ul>
+
+    <iframe id="sketch1" src="sketch1.html" scrolling="no"></iframe>
+    <iframe id="sketch2" src="sketch2.html" scrolling="no"></iframe>
+
+
+    <script>
+
+      // game state 0-initial 1-Level1
+
+      var gameState = 0
+
+      var gameMode = 1000
+
+      var replay = false
+
+
+      var world1 = [
+        [9,9,1,1,1,1,1,1,1,9,9],
+        [9,9,9,0,0,0,0,0,9,9,9],
+        [1,9,0,0,0,0,0,0,0,0,1],
+        [1,0,0,0,0,0,0,0,0,0,1],
+        [1,0,0,0,0,0,0,0,0,0,1],
+        [1,0,0,0,0,0,0,0,0,0,1],
+        [1,0,0,0,0,0,0,0,0,0,1],
+        [1,9,0,0,0,0,0,0,0,0,1],
+        [1,9,0,0,0,0,0,0,0,9,1],
+        [9,9,9,0,0,0,0,0,9,9,9],
+        [22,9,1,1,1,1,1,1,1,9,11],
+      ]
+
+      var world2 = [
+        [9,9,1,1,1,1,1,1,1,9,9],
+        [9,9,9,0,0,0,0,0,9,9,9],
+        [1,9,0,0,0,0,0,0,0,0,1],
+        [1,0,0,0,0,0,0,0,0,0,1],
+        [1,0,0,0,0,0,0,0,0,0,1],
+        [1,0,0,0,0,0,0,0,0,0,1],
+        [1,0,0,0,0,0,0,0,0,0,1],
+        [1,9,0,0,0,0,0,0,0,0,1],
+        [1,9,0,0,0,0,0,0,0,9,1],
+        [9,9,9,0,0,0,0,0,9,9,9],
+        [22,9,1,1,1,1,1,1,1,9,11],
+      ]
+
+      var world_new2 = [
+        [9,9,1,1,1,1,1,1,1,9,9],
+        [9,9,9,0,0,0,0,0,9,9,9],
+        [1,9,0,0,0,0,0,0,0,0,1],
+        [1,0,0,0,0,0,0,0,0,0,1],
+        [1,0,0,0,0,0,0,0,0,0,1],
+        [1,0,0,0,0,0,0,0,0,0,1],
+        [1,0,0,0,0,0,0,0,0,0,1],
+        [1,9,0,0,0,0,0,0,0,0,1],
+        [1,9,0,0,0,0,0,0,0,9,1],
+        [9,9,9,0,0,0,0,0,9,9,9],
+        [22,9,1,1,1,1,1,1,1,9,11],
+      ]
+
+      var world_new3 = [
+        [9,9,1,1,1,1,1,1,1,9,9],
+        [9,9,9,0,0,0,0,0,9,9,9],
+        [1,9,0,0,0,0,0,0,0,0,1],
+        [1,0,0,0,0,0,0,0,0,0,1],
+        [1,0,0,0,0,0,0,0,0,0,1],
+        [1,0,0,0,0,0,0,0,0,0,1],
+        [1,0,0,0,0,0,0,0,0,0,1],
+        [1,9,0,0,0,0,0,0,0,0,1],
+        [1,9,0,0,0,0,0,0,0,9,1],
+        [9,9,9,0,0,0,0,0,9,9,9],
+        [22,9,1,1,1,1,1,1,1,9,11],
+      ]
+
+
+
+
+
+
+
+
+
+      var world_cus1 = [
+
+        [0,0,0,0,0,0,0,0,0,0,0],
+        [0,0,0,0,0,0,0,0,0,0,0],
+        [0,0,0,0,0,0,0,0,0,0,0],
+        [0,0,0,0,0,0,0,0,0,0,0],
+        [0,0,0,0,0,0,0,0,0,0,0],
+        [0,0,0,0,0,0,0,0,0,0,0],
+        [0,0,0,0,0,0,0,0,0,0,0],
+        [0,0,0,0,0,0,0,0,0,0,0],
+        [0,0,0,0,0,0,0,0,0,0,0],
+        [0,0,0,0,0,0,0,0,0,0,0],
+        [0,0,0,0,0,0,0,0,0,0,0],
+    ]
+
+    var world_cus2 = [
+
+        [0,0,0,0,0,0,0,0,0,0,0],
+        [0,0,0,0,0,0,0,0,0,0,0],
+        [0,0,0,0,0,0,0,0,0,0,0],
+        [0,0,0,0,0,0,0,0,0,0,0],
+        [0,0,0,0,0,0,0,0,0,0,0],
+        [0,0,0,0,0,0,0,0,0,0,0],
+        [0,0,0,0,0,0,0,0,0,0,0],
+        [0,0,0,0,0,0,0,0,0,0,0],
+        [0,0,0,0,0,0,0,0,0,0,0],
+        [0,0,0,0,0,0,0,0,0,0,0],
+        [0,0,0,0,0,0,0,0,0,0,0],
+    ]
+
+
+    var c1PosX
+    var c1PosY
+    var c2PosX
+    var c2PosY
+
+
+
+
+
+
+
+
+
+
+
+      var L1timer = 100
+
+      // screen 1 - in - move right
+      var L1moveIn1 = false;
+
+      // screen 1 - out - move left
+      var L1moveOut1 = false;
+
+      // screen 2 - in - move left
+      var L1moveIN2 = false;
+
+      // screen 2 - out - move right
+      var L1moveOut2 = false;
+
+      // screen 1 - up
+      var L1moveUp1 = false;
+
+      // screen 1 - down
+      var L1moveDown1 = false;
+
+      // screen 2 - up
+      var L1moveUp2 = false;
+
+      // screen 2 - down
+      var L1moveDown2 = false;
+
+
+
+    </script>
+
+  </body>
+</html>
