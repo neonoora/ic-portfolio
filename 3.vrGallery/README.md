@@ -4,7 +4,7 @@
 
 * This is an assignment for the Interactive Computing Class. I made a mini VR photo exhibition to show the memories of my last summer. It may take a while to load.
 
-   <img src="images/doc1.jpg" width="300"/>
+   <img src="images/vrgallery.gif" width="300"/>
  
 * Music will be played once the user enters the gallery. There is a small white sphere that helps user locate in the center. The user can use mouse to move around to view the photos. There are 8 photos in total all created by Object Oriented Programming (OOP).
 
