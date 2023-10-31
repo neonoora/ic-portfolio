@@ -1,5 +1,7 @@
 ## [➡️ PLAY NOW](https://hainuochen.hosting.nyu.edu/newport/spaceshipFolder/spaceship-game.html)
 
+<img src="images/spaceshipgame.gif" width="500"/>
+
 *   Click on the background to start
 *   Use A & D to move the plate left & right
   
