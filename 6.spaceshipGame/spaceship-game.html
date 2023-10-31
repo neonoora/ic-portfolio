@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HC HOME PAGE</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=0.5">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+        <link rel="stylesheet" type="text/css" href="../styles.css">
+
+        <style>
+
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+            line-height: 180%;
+        }
+
+        #spacetextdiv {
+            flex: 1;
+        }
+
+        </style>
+
+
+    </head>
+    <body>
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand cute-button" href="../index.html"><b>HAINUO CHEN</b></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup" >
+            <div class="navbar-nav">
+                <a class="nav-link cute-button" href="../portfolio.html">PORTFOLIO</a>
+                <a class="nav-link cute-button" href="../misc.html">MISC</a>
+                <a class="nav-link cute-button" href="../resume.html">RESUME</a>
+            </div>
+          </div>
+        </div>
+    </nav>
+
+    <div style="text-align: center;" >
+      <h3><b>Assignment 02 - Spaceship Game (Sept.28, 2022)</b></h3>
+      <div class="buttons-box" style="justify-content: center;">
+        <a href="https://github.com/neonoora/udgrportfolio/tree/main/spaceshipGame"><button type="button" class="btn btn-primary btn-lg">GitHub</button></a>
+      </div>
+    </div>
+    <div class="content" >
+      <div id="spacetextdiv">
+        
+      <ul>
+        <li>Click on the background to start</li>
+        <li>Use A & D to move the plate left & right</li><br>
+        
+        <li>The angle of ejection and bounce height depend on the ball's contact point with the plate:
+          central contact results in higher bounces, while oblique contact leads to lower bounces.</li>
+        <li>The ball changes color gradually</li>
+        <li>The spaceship changes size after every hit</li>
+      </ul>
+      </div>
+      <iframe src="index.html" scrolling="no" width="500" height = "520" frameborder = 0>
+      </iframe>
+    </div>
+
+  </body>
+ </html>
