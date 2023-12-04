@@ -1,6 +1,6 @@
 ## VR Gallery Documentation (Nov.28, 2022)
 
-## [➡️ PLAY NOW](https://hainuochen.hosting.nyu.edu/newport/vrGalleryFolder/index.html)
+## [➡️ PLAY NOW](https://hainuochen.hosting.nyu.edu/vrGalleryFolder/index.html)
 
 * This is an assignment for the Interactive Computing Class. I made a mini VR photo exhibition to show the memories of my last summer. It may take a while to load.
 
