@@ -1,4 +1,4 @@
-## [➡️ PLAY NOW](https://hainuochen.hosting.nyu.edu/newport/spaceshipFolder/spaceship-game.html)
+## [➡️ PLAY NOW](https://hainuochen.hosting.nyu.edu/spaceshipFolder/spaceship-game.html)
 
 <img src="images/spaceshipgame.gif" width="500"/>
 
