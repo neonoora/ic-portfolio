@@ -1,6 +1,6 @@
 ## Halloween Game Documentation (Oct.17, 2022)
 
-## [➡️ PLAY NOW](https://hainuochen.hosting.nyu.edu/newport/halloweenFolder/index.html)
+## [➡️ PLAY NOW](https://hainuochen.hosting.nyu.edu/halloweenFolder/index.html)
 
 <img src="images/halloweengame.gif" width="400"/>
 
