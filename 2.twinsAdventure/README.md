@@ -1,6 +1,6 @@
 ## Twins Adventure Documentation (Nov. 09, 2022)
 
-## [➡ PLAY NOW](https://hainuochen.hosting.nyu.edu/newport/twinsFolder/twinDemo/index.html)
+## [➡ PLAY NOW](https://hainuochen.hosting.nyu.edu/twinsFolder/twinDemo/index.html)
   
 Twin Adventure is my Midterm Project for the Fall 2022 Interactive Computing class written using p5. 
 
