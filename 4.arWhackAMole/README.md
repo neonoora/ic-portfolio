@@ -1,6 +1,6 @@
 ## AR Whack-A-Mole Documentation (Dec. 12, 2022)
 
-## [➡️ PLAY NOW](https://hainuochen.hosting.nyu.edu/newport/arWhackFolder/index.html)
+## [➡️ PLAY NOW](https://hainuochen.hosting.nyu.edu/arWhackFolder/index.html)
 
 This is an assignment for the Interactive Computing Class. I made an AR Whack A Mole game based on color tracking. It requires access to your web camera.
 
