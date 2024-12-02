@@ -2,7 +2,7 @@ Final Documentation (Dec. 20, 2022)
 -----------------------------------
 ## [➡️ VIDEO DEMO](https://www.youtube.com/watch?v=UAVsBXnT-oQ)
 
-## [➡️ PLAY NOW](https://hainuochen.hosting.nyu.edu/vrTangramGardenFolder/3Dnewnewnew/index.html)
+## [➡️ PLAY NOW](https://hainuoc.com/vrTangramGarden/3Dnewnewnew/index.html)
 *Use Firefox or Safari for the best result. May take a while to load*
 
 #### I created the Tangram Garden as my final project for the Interactive Computing Class. The user can use the 2D easel to make 3D tangram creatures, which can be added to the garden and move (or not) according to their attributes.
